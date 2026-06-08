@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function makeButton(className, text, callback) {
+
+            const button = document.createElement('button');
+
+            button.classList.add(className);
+            button.textContent = text;
+            button.addEventListener('click', callback);
+
+            return button;
+        }
+
+        const button1 = makeButton('btn btn-primary', 'Click me', () => alert('Button 1 clicked!'));
+        const button2 = makeButton('btn btn-secondary', 'Click me too', () => alert('Button 2 clicked!'));
+
+    </script>
+</body>
+</html>
