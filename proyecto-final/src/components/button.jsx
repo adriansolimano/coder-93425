@@ -1,9 +1,9 @@
 
-export const Button = ({ className, text, onClick }) => {
+export const Button = ({children, className, onClick, role = "button", type="button" }) => {
 
     return (
-        <button className={className} onClick={onClick} type='button' role='button'>
-            {text}
+        <button className={className} onClick={onClick} type={type} role={role}>
+            {children}
         </button>
     )
 
